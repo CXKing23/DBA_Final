@@ -90,7 +90,6 @@ app.get('/api/vehicle-name/:vehicleId', async (req, res) => {
 
 
 
-// Example route in your Express backend (server.js)
 app.get('/api/vehicle/:playerId', async (req, res) => {
   const playerId = req.params.playerId;
 
@@ -124,6 +123,7 @@ app.get('/api/users', async (req, res) => {
     res.status(500).json({ error: 'Database query failed' });
   }
 });
+
 app.get('/api/player-stats/:playerId', async (req, res) => {
   const playerId = req.params.playerId;
   try {
@@ -134,7 +134,7 @@ app.get('/api/player-stats/:playerId', async (req, res) => {
        WHERE p.player_id = ?`,
       [playerId]
     );
-    res.json(rows[0]); // Return single result
+    res.json(rows[0]); 
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch player stats' });
   }
