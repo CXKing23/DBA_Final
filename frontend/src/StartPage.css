@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Start Page Styles */
+.start-page {
+  text-align: center;
+  margin: 30px;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between grid items */
+  max-width: 1000px;
+  margin: 0 auto; /* Center the grid container */
+  padding: 20px;
+}
+
+/* Grid Items */
+.grid-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 100%;
+}
+
+.grid-item:hover {
+  background-color: #e1e1e1;
+  transform: translateY(-5px); /* Slight hover lift effect */
+}
+
+/* Grid Item Heading */
+.grid-item h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Links in Grid Items */
+.grid-item a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.grid-item a:hover {
+  color: #388E3C; /* Darker green on hover */
+  text-decoration: underline;
+}
+.vehicle-image {
+  width: 100%;       /* Makes the image take the full width of its container */
+  height: auto;      /* Maintains aspect ratio */
+  max-height: 200px; /* Optional: limit the height so it doesn't overflow */
+  object-fit: contain; /* Ensures image scales without cropping */
+  display: block;
+  margin: 0 auto;    /* Center the image if needed */
+}
+.battle-button, .logout-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.25rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.battle-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+}
